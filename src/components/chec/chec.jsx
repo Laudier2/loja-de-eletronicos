@@ -47,13 +47,20 @@ const chenger = (e) => {
 
 const Consumo = () => {
 
+  const [ busca, setBusca ] = useState('')
   const [ chec, setChec ] = useState([])
 
   useEffect(() => {
     const Proc = async () => {
-      const product = await commerce.products.list()
+      try {
+        const product = await commerce.products.list({ limit: 100 })
               
-      setChec((product && product.data))
+        setBusca((product && product.data))
+        setChec((product && product.data))
+       
+      } catch (error) {
+        console.log({Erro: error})
+      }
     }
     Proc()
   }, [])
@@ -69,21 +76,33 @@ const Consumo = () => {
     console.log(r)
   }
 
-  const [ busca, setBusca ] = useState('')
 
-  //const checFilter = chec.filter((res) => res.startsWith(busca))
-
-  //console.log(checFilter)
+  const handleChanher = ({ target }) => {
+    if(!target.value) {
+      setChec(busca)
+      return
+    }
+      
+      setTimeout(() => {
+        const Reace1 = async () => {
+          const checFilter = chec.filter(({name}) => name.includes(target.value.toLowerCase()))
+          const r = await checFilter
+          
+          setChec(r)
+          
+        }
+        Reace1()
+      }, 4000)
+  }
 
   return (
     <div>
       
       <Slids />
-        <form className="form-inline my-2 my-lg-0">
+        <form className="form-inline my-2 my-lg-0 container">
             <input 
             className="form-control mr-sm-2 col-12" 
-            value={busca}
-            onChange={(e) => setBusca(e.target.value)} 
+            onChange={handleChanher} 
             type="search" 
             placeholder="Pesquisa" 
             aria-label="Search"

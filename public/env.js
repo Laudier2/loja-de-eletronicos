@@ -57,7 +57,7 @@ window.env = {
   "npm_package_browserslist_development_0": "last 1 chrome version",
   "npm_package_dependencies_axios": "^0.21.0",
   "npm_package_dependencies__fortawesome_react_fontawesome": "^0.1.14",
-  "PATH": "/tmp/yarn--1631417249844-0.018284613891544232:/home/hk/react-pj/ts/node_modules/.bin:/usr/local/share/.config/yarn/link/node_modules/.bin:/usr/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/lib/node_modules/npm/bin/node-gyp-bin:/usr/bin/node_modules/npm/bin/node-gyp-bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/root/.dotnet/tools",
+  "PATH": "/tmp/yarn--1631460273441-0.3921839466299524:/home/hk/react-pj/ts/node_modules/.bin:/usr/local/share/.config/yarn/link/node_modules/.bin:/usr/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/lib/node_modules/npm/bin/node-gyp-bin:/usr/bin/node_modules/npm/bin/node-gyp-bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/root/.dotnet/tools",
   "NODE": "/usr/bin/node",
   "npm_package_browserslist_development_1": "last 1 firefox version",
   "npm_package_name": "ts",

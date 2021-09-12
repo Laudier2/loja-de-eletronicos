@@ -148,7 +148,7 @@ const Descricao = () => {
                           </div>
                           <br /><br />
                           <br /><br />
-                          <Link to="/">
+                          <Link to="/" style={{textDecoration: 'none'}}>
                             <button className="btn btn-danger btn-block">voltar</button>
                           </Link>
                         </div>
